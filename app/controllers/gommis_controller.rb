@@ -6,12 +6,19 @@ class GommisController < ApplicationController
   def index
     @gommis = Gommi.all
   end
-
   # GET /gommis/1
   # GET /gommis/1.json
   def show
+    @gommis_count = Gommi.count
   end
 
+def pick
+  @gommis_count = Gommi.count
+  @gommis = Gommi.offset(rand(Gommi.count)).first
+end
+
+def complete
+end
   # GET /gommis/new
   def new
     @gommi = Gommi.new
@@ -28,7 +35,7 @@ class GommisController < ApplicationController
 
     respond_to do |format|
       if @gommi.save
-        format.html { redirect_to @gommi, notice: 'Gommi was successfully created.' }
+        format.html { redirect_to gommis_complete_path, notice: 'Gommi was successfully created.' }
         format.json { render :show, status: :created, location: @gommi }
       else
         format.html { render :new }
@@ -50,6 +57,7 @@ class GommisController < ApplicationController
       end
     end
   end
+
 
   # DELETE /gommis/1
   # DELETE /gommis/1.json

@@ -15,5 +15,6 @@
   <%= @gommi.kind %>
 </p>
 
-<%= link_to 'Edit', edit_gommi_path(@gommi) %> |
-<%= link_to 'Back', gommis_path %>
+<!-- <%= link_to 'Edit', edit_gommi_path(@gommi) %> |
+<%= link_to 'Back', gommis_path %> -->
+<%= link_to 'show another gommi', "#{Gommi.offset(rand(Gommi.count)).first.id}" %>
