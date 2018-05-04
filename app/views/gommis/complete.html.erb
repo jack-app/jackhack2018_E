@@ -1,3 +1,17 @@
-<h1>捨てられました</h1>
-<%=link_to("もう一度捨てる", new_gommi_path)%>
-<%=link_to("ゴミを漁る", gommis_pick_path)%>
+
+
+<div class="gommis_complete">
+  <br><br><br>
+  <h1> すてました！</h1>
+  <br><br>
+  <%=image_tag(src = "/assets/dustBox", size: 20*20, class: "dustBox")%>
+  <br><br><br>
+  <div class="boxContainer">
+    <div class="box1">
+      <%=link_to("もう一度捨てる", new_gommi_path, :style=>"color: #3AB795;" )%>
+    </div>
+    <div class="box2">
+      <%=link_to("ゴミを漁る", gommis_pick_path, :style=>"color: #3AB795;")%>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,35 @@
 // Place all the styles related to the gommis controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$main: #3AB795;
+
+.gommis_complete{
+  text-align: center;
+  // background: #ffffff;
+  h1{
+    text-align: center;
+    color: $main;
+    font-size: 100px;
+  }
+  .dustBox{
+    margin: 0 auto;
+  }
+
+  .boxContainer{
+    .box1{
+      float: left;
+      margin-left: 20%;
+      width: 30%;
+      text-align: center;
+      color: $main;
+    }
+    .box2{
+      margin-left: 50%;
+      width:30%;
+      text-align: center;
+      color: $main;
+    }
+    font-size: 30px;
+  }
+}
