@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @gommi.title %>
+</p>
+
+<p>
+  <strong>Explanation:</strong>
+  <%= @gommi.explanation %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @gommi.kind %>
+</p>
+
+<%= link_to 'Edit', edit_gommi_path(@gommi) %> |
+<%= link_to 'Back', gommis_path %>

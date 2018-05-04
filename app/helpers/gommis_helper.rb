@@ -1,0 +1,2 @@
+module GommisHelper
+end

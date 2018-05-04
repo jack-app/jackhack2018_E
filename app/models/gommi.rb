@@ -1,0 +1,2 @@
+class Gommi < ApplicationRecord
+end
