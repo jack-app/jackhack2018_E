@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$main: #3AB795;
+$main: #1e90ff;
 
 .gommis_complete{
   text-align: center;
@@ -10,11 +10,13 @@ $main: #3AB795;
   h1{
     text-align: center;
     color: $main;
-    font-size: 100px;
+    font-size: 90px;
   }
   .dustBox{
     margin: 0 auto;
   }
+
+
 
   .boxContainer{
     .box1{
@@ -31,5 +33,11 @@ $main: #3AB795;
       color: $main;
     }
     font-size: 30px;
+  }
+}
+
+.gommiForm{
+  .textfield{
+    background: #ccb7a3;
   }
 }

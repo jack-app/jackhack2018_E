@@ -14,9 +14,12 @@
  *= require_self
  */
 
-
+ @font-face{
+   font-family: "seaFont";
+   src: font-url('seap.ttf') format('truetype');
+ }
  @import "bootstrap";
- $main: #3AB795;
+ $main: #1e90ff;
  .navbar {
    background: $main;
    color: #000000;
@@ -29,7 +32,7 @@
 
  .navbar-brand{
    text-align: left;
-   color: #fffce0;
+   color: #cce6ff;
  }
 
  .navbar-default .navbar-nav > li > a:hover,
@@ -39,5 +42,6 @@
  }
 
  body{
-   background: #fffce0
+   font-family: "seaFont";
+   background: #cce6ff
  }

@@ -1,17 +1,18 @@
 
-
+<%= javascript_include_tag "wave.js" %>
 <div class="gommis_complete">
   <br><br><br>
-  <h1> すてました！</h1>
+  <h1>ながしました !</h1>
   <br><br>
-  <%=image_tag(src = "/assets/dustBox", size: 20*20, class: "dustBox")%>
+  <%=image_tag(src = "/assets/dustBox", size: 17*17, class: "dustBox")%>
+  <br><br><br>
   <br><br><br>
   <div class="boxContainer">
     <div class="box1">
-      <%=link_to("もう一度捨てる", new_gommi_path, :style=>"color: #3AB795;" )%>
+      <%=link_to("もう一度捨てる", new_gommi_path, :style=>"color: #3AB795;border-bottom: solid 3px;" )%>
     </div>
     <div class="box2">
-      <%=link_to("ゴミを漁る", gommis_pick_path, :style=>"color: #3AB795;")%>
+      <%=link_to("ゴミを漁る", gommis_pick_path, :style=>"color: #3AB795;border-bottom: solid 3px;")%>
     </div>
   </div>
 </div>

@@ -3,23 +3,27 @@
   <br>
   <br>
 
-  <h1>gommy</h1>
+  <h1>bottle</h1>
+  <br>  <br>
   <br>  <br>
   <br>
   <br>
   <br>
-
   <div class="view">
     <div class="boxContainer">
     	<div class="box">
-        <h2>すてにいく</h2>
-        <%= link_to(image_tag(src = "/assets/toDust.png", size: 17*17, class: "toNext"), new_gommi_path)%>
+        <%= link_to("ながしにいく", new_gommi_path, style: "font-size: 80px")%>
       </div>
     	<div class="box">
-        <h2>あさりにいく</h2>
-        <%= link_to(image_tag(src = "/assets/toPick", size: 17*17, class: "toNext"), gommis_pick_path)%>
+        <%= link_to("ひろいにいく", gommis_pick_path, style: "font-size: 80px")%>
       </div>
     </div>
   </div>
 
+    <div id="canvas-container">
+      <%= image_tag(src = "/assets/flowedBin.png", style: " position:  absolute; z-index: 1; width: 9%;", id:"flowedBin")%>
+        <canvas id="sineCanvas" width="800" height="300"></canvas>
+        <%= image_tag(src = "/assets/stone.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%;", id:"stone")%>
+    </div>
 </div>
+<%= javascript_include_tag 'wave' %>
