@@ -13,6 +13,31 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
 
- .navbar { background: #86BAA1 }
+
+ @import "bootstrap";
+ $main: #3AB795;
+ .navbar {
+   background: $main;
+   color: #000000;
+   height: 80px;
+ }
+
+ .navbar-header{
+   text-align: left;
+ }
+
+ .navbar-brand{
+   text-align: left;
+   color: #fffce0;
+ }
+
+ .navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+ color: $main;
+ background-color: transparent;
+ }
+
+ body{
+   background: #fffce0
+ }

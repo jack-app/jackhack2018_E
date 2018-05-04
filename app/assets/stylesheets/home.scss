@@ -1,3 +1,58 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+
+$main: #3AB795;
+
+.home{
+  h1{
+    color: $main;
+    font-size: 100px;
+    text-align: center;
+  }
+
+   h2{
+     color: $main;
+   }
+
+   .box {
+     float: left;
+    width: 50%;
+   }
+
+   .toNext{
+     // box-shadow: 2px 2px;
+   }
+
+
+    .boxContainer {
+    	overflow: hidden;
+     text-align: center;
+     // background: #ffffff;
+    }
+
+    /* clearfix */
+    .boxContainer:before,
+    .boxContainer:after {
+        content: "";
+        display: table;
+    }
+
+    .boxContainer:after {
+        clear: both;
+    }
+
+   .view{
+     width: 60%;
+     margin-left: auto;
+     margin-right: auto;
+   }
+
+    /* For IE 6/7 (trigger hasLayout) */
+    .boxContainer {
+        zoom: 1;
+    }
+
+}

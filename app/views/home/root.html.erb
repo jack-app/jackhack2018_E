@@ -1,3 +1,25 @@
-<h1>さあ、あなたのゴミを捨てよう(適当)</h1>
-<%= link_to(image_tag(src = "/assets/testAssets/nasu.jpg"), new_gommi_path)%>
-<%= link_to(image_tag(src = "/assets/testAssets/nasu.jpg"), gommis_pick_path)%>
+
+<div class="home">
+  <br>
+  <br>
+
+  <h1>gommy</h1>
+  <br>  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="view">
+    <div class="boxContainer">
+    	<div class="box">
+        <h2>すてにいく</h2>
+        <%= link_to(image_tag(src = "/assets/toDust.png", size: 17*17, class: "toNext"), new_gommi_path)%>
+      </div>
+    	<div class="box">
+        <h2>あさりにいく</h2>
+        <%= link_to(image_tag(src = "/assets/toPick", size: 17*17, class: "toNext"), gommis_pick_path)%>
+      </div>
+    </div>
+  </div>
+
+</div>
