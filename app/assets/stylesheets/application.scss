@@ -23,9 +23,12 @@
  .navbar {
    background: $main;
    color: #000000;
-   height: 80px;
+   height: 10%;
  }
 
+html{
+  height: 100%;
+}
  .navbar-header{
    text-align: left;
  }
@@ -42,6 +45,11 @@
  }
 
  body{
+
+   a:hover{
+     background-color: rgba(0,0,0,0.1);
+   }
+   height: 100%;
    font-family: "seaFont";
    background: #cce6ff
  }

@@ -12,10 +12,10 @@
   <div class="view">
     <div class="boxContainer">
     	<div class="box">
-        <%= link_to("ながしにいく", new_gommi_path, style: "font-size: 80px")%>
+        <%= link_to("ながしにいく", new_gommi_path, style: "font-size: 80px; border-bottom: solid;")%>
       </div>
     	<div class="box">
-        <%= link_to("ひろいにいく", gommis_pick_path, style: "font-size: 80px")%>
+        <%= link_to("ひろいにいく", gommis_pick_path, style: "font-size: 80px; border-bottom: solid;")%>
       </div>
     </div>
   </div>
@@ -23,7 +23,6 @@
     <div id="canvas-container">
       <%= image_tag(src = "/assets/flowedBin.png", style: " position:  absolute; z-index: 1; width: 9%;", id:"flowedBin")%>
         <canvas id="sineCanvas" width="800" height="300"></canvas>
-        <%= image_tag(src = "/assets/stone.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%;", id:"stone")%>
     </div>
 </div>
 <%= javascript_include_tag 'wave' %>

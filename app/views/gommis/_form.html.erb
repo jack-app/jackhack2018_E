@@ -12,23 +12,26 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= form.label(:title) %>
-      <%= form.text_field :title, class: 'textfield'%>
-    </div>
+<div class="forms">
+  <div class="field">
+    <%= form.text_field :title, placeholder: "たいとる", class: 'title_textfield textfield'%>
+  </div>
 
-    <div class="field">
-      <%= form.label :explanation%>
-      <%= form.text_field :explanation, class: 'textfield'%>
-    </div>
+  <div class="field">
+    <%= form.text_area :explanation, placeholder: "くわしくかきたかったらどうぞ", class: 'explanation_textfield textfield'%>
+  </div>
 
-    <div class="field">
-      <%= form.label :kind %>
-      <%= form.text_field :kind, class: 'textfield' %>
-    </div>
+  <div class="field">
+    <%= form.text_field :kind,placeholder: "しゅるいをせんたくしてね", class: 'kind_textfield textfield' %>
+  </div>
+
+</div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= button_tag type: :submit do %>
+        <%= image_tag "flowedBin.png",style: "z-index: 1000000;" %>
+      <% end %>
+      <!-- <%= image_submit_tag "flowedBin.png" %> -->
     </div>
   <% end %>
 

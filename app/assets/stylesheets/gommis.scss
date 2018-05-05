@@ -3,21 +3,101 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $main: #1e90ff;
+//手紙作成画面
+.gommi_new{
+  height: 100%;
+  h1{
+    text-align: center;
+    font-size: 50px;
+  }
+  .gommiForm{
+    height: 90%;
+    text-align: center;
+    form{
+      height: 100%;
+      .forms{
+        margin-left: auto;
+        margin-right: auto;
+        background: #ffffff;
+        width: 66%;
+        height: 60%;
+        outline: none;
+        input{
+          outline: none;
+        }
+        textarea{
+          outline: none;
+        }
 
+        .textfield{
+          border: none;
+          border-bottom: solid gray;
+        }
+        .title_textfield{
+          font-size: 3em;
+          width: 25%;
+          position: absolute;
+          left: 22%;
+          top: 32%;
+        }
+        .explanation_textfield{
+          font-size: 20;
+          position: absolute;
+          // padding: 10px;
+          left: 25%;
+          top: 42%;
+          width: 50%;
+          height: 30%;
+          background: #ffffff -webkit-gradient(
+          linear,
+          left top, left bottom,
+          from(rgba(0, 0, 0, 0)),
+          color-stop(0.96, rgba(0, 0, 0, 0)),
+          color-stop(0.98, rgba(0, 0, 0, 0.5)),
+          to(rgba(0, 0, 0, 0))
+          );
+          background-size: auto 2em;
+          font-size: 2em;
+          line-height: 2em;
+          border: none;
+          border-radius: 2px;
+          overflow: hidden;
+        }
+      }
+      .kind_textfield{
+        position: absolute;
+        left: 64%;
+        top: 35%;
+      }
+      .action{
+        button{
+          border: none;
+          background: none;
+        }
+
+      }
+    }
+
+  }
+}
+// 完了画面用
 .gommis_complete{
   text-align: center;
   // background: #ffffff;
   h1{
     text-align: center;
     color: $main;
-    font-size: 90px;
+    font-size: 80px;
   }
   .dustBox{
     margin: 0 auto;
   }
-
-
-
+  #sineCanva{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -100;
+  }
   .boxContainer{
     .box1{
       float: left;
@@ -33,11 +113,5 @@ $main: #1e90ff;
       color: $main;
     }
     font-size: 30px;
-  }
-}
-
-.gommiForm{
-  .textfield{
-    background: #ccb7a3;
   }
 }
