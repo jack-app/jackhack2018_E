@@ -1,20 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="show">
+  <div class="onPaper">
+    <%=image_tag("/assets/paper.png", style: "width:100%; z-index: -1")%>
+    <div class="moji">
+      <p class="title">
+        <%= @gommi.title %>
+      </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @gommi.title %>
-</p>
+      <p class="explanation">
+        <%= @gommi.explanation %>
+      </p>
 
-<p>
-  <strong>Explanation:</strong>
-  <%= @gommi.explanation %>
-</p>
+      <p class="kind">
+        <%= @gommi.kind %>
+      </p>
+    </div>
+  </div>
 
-<p>
-  <strong>Kind:</strong>
-  <%= @gommi.kind %>
-</p>
 
-<!-- <%= link_to 'Edit', edit_gommi_path(@gommi) %> |
-<%= link_to 'Back', gommis_path %> -->
-<%= link_to 'show another gommi', "#{Gommi.offset(rand(Gommi.count)).first.id}" %>
+  <!-- <%= link_to 'Edit', edit_gommi_path(@gommi) %> |
+  <%= link_to 'Back', gommis_path %> -->
+  <%= link_to image_tag("/assets/binButton.png"), gommis_pick_path %>
+</div>
+
+<%= image_tag(src = "/assets/sunahama.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: -1", id:"stone")%>
