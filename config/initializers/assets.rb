@@ -4,7 +4,7 @@
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( wave.js )
 Rails.application.config.assets.precompile += %w( waveforComplete.js )
-
+Rails.application.config.assets.precompile += %w( pick.js )
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.

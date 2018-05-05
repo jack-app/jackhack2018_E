@@ -1,7 +1,7 @@
 <div class="pick">
   <br><br><br>
   <h1>びんをはっけん</h1>
-  <%=link_to(image_tag("/assets/synahama_bin.png", style:"id: pyonBin; position: absolute; top: 55%; left: 44%;height: 30%;"), "#{Gommi.offset(rand(Gommi.count)).first.id}")%>
+  <%=link_to(image_tag("/assets/synahama_bin.png", style:"position: absolute; top: 55%; left: 44%;height: 30%;", id: "pyonBin"), "#{Gommi.offset(rand(Gommi.count)).first.id}")%>
 </div>
 <%= image_tag(src = "/assets/sunahama.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: -1", id:"stone")%>
 <%= javascript_include_tag 'pick' %>
