@@ -17,10 +17,11 @@
   </div>
 
     <div id="canvas-container">
-      <%= image_tag(src = "/assets/flowedBin.png", style: " position:  absolute; z-index: 1; width: 9%;", id:"flowedBin")%>
+      <%= image_tag(src = "/assets/flowedBin.png", style: " position:  absolute; z-index: 100; width: 9%;", id:"flowedBin")%>
         <canvas id="sineCanvas" width="800" height="300"></canvas>
     </div>
 </div>
 <%= image_tag(src = "/assets/stone.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: -1", id:"stone")%>
+
 
 <%= javascript_include_tag 'wave' %>
