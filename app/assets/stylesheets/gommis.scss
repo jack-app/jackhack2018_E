@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $main: #1e90ff;
+@font-face{
+  font-family: "seaFont";
+  src: font-url('seap.ttf') format('truetype');
+}
 //手紙作成画面
 .gommi_new{
   height: 100%;
@@ -28,6 +32,18 @@ $main: #1e90ff;
         textarea{
           outline: none;
         }
+        select{
+          outline: none;
+            position: absolute;
+            left: 61%;
+            top: 35%;
+            width: 12%;
+            height: 4%;
+              option{
+                font-family: "seaFont";
+              }
+            }
+
 
         .textfield{
           border: none;
