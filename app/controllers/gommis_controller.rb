@@ -1,5 +1,5 @@
 class GommisController < ApplicationController
-  before_action :set_gommi, only: [:show, :edit, :update, :destroy]
+  before_action :set_gommi, only: [ :edit, :update, :destroy]
 
   # GET /gommis
   # GET /gommis.json
@@ -8,13 +8,15 @@ class GommisController < ApplicationController
   end
   # GET /gommis/1
   # GET /gommis/1.json
-  def show
-    @gommis_count = Gommi.count
-  end
 
 def pick
   @gommis_count = Gommi.count
   @gommis = Gommi.offset(rand(Gommi.count)).first
+end
+
+def lttr
+  @gommis = Gommi.offset(rand(Gommi.count)).first
+
 end
 
 def complete

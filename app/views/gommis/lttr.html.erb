@@ -3,22 +3,21 @@
     <%=image_tag("/assets/paper.png", style: "width:100%; z-index: -1")%>
     <div class="moji">
       <p class="title">
-        <%= @gommi.title %>
+        <%= @gommis.title %>
       </p>
 
       <p class="explanation">
-        <%= @gommi.explanation %>
+        <%= @gommis.explanation %>
       </p>
 
       <p class="kind">
-        <%= @gommi.kind %>
+        <%= @gommis.kind %>
       </p>
     </div>
   </div>
 
 
-  <!-- <%= link_to 'Edit', edit_gommi_path(@gommi) %> |
-  <%= link_to 'Back', gommis_path %> -->
+
   <%= link_to image_tag("/assets/roson2.png"), gommis_pick_path %>
 </div>
 
