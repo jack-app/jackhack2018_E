@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$main: #1e90ff;
+ @import "bootstrap";
+ $main: #1e90ff;
+
 @font-face{
   font-family: "seaFont";
   src: font-url('seap.ttf') format('truetype');
@@ -67,31 +69,87 @@ $main: #1e90ff;
   text-align: center;
   // background: #ffffff;
   h1{
+    padding-top: 100px;
     text-align: center;
     color: $main;
+    font-size: 8vw;
+  }
+
+  #pyonBin {
+  display: inline-block;
+  padding: .65em 4em;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+#pyonBin:hover {
+  -webkit-animation: bounce 2s ease-in-out;
+  animation: bounce 2s ease-in-out;
+}
+@-webkit-keyframes bounce {
+  5%  { -webkit-transform: scale(1.1, .8); }
+  10% { -webkit-transform: scale(.8, 1.1) translateY(-5px); }
+  15% { -webkit-transform: scale(1, 1); }
+}
+@keyframes bounce {
+  5%  { transform: scale(1.1, .8); }
+  10% { transform: scale(.8, 1.1) translateY(-5px); }
+  15% { transform: scale(1, 1); }
+}
+}
+@media(min-width: 768px){
+  .pick h1{
     font-size: 80px;
   }
 }
 
+@media(max-width: 767px){
+  .pick .pyon{
+    max-width: auto;
+     height: 50px;
+    top: 60%;
+    left: 38%;
+    height: 30%
+  }
+}
+
+.show {
+  a :hover{
+    background-color: (0,0,0,0);
+  }
+  img:hover{
+      background-color:(0,0,0,0);
+    }
+}
+
 //手紙作成画面
+.forms{
+  width:800px;
+height:480px;
+background:#e6e6e6;
+border-radius:8px;
+box-shadow:0 0 40px -10px #000;
+margin:calc(50vh - 220px) auto;
+max-width:calc(100vw - 40px);
+box-sizing:border-box;
+margin-bottom:100px;
+}
+
 .gommi_new{
   height: 100%;
   h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 8vw;
+    color: #1e90ff
   }
   .gommiForm{
     height: 90%;
     text-align: center;
+
     form{
       height: 100%;
       .forms{
-        margin-left: auto;
-        margin-right: auto;
-        background: #ffffff;
-        width: 66%;
-        height: 60%;
-        outline: none;
         input{
           outline: none;
         }
@@ -114,13 +172,16 @@ $main: #1e90ff;
         .textfield{
           border: none;
           border-bottom: solid gray;
+          margin-top: 20px;
+          background-color: #e6e6e6;
         }
         .title_textfield{
           font-size: 3em;
           width: 25%;
           position: absolute;
-          left: 22%;
-          top: 32%;
+          left: 25%;
+          top: 30%;
+          background-color: #e6e6e6;
         }
         .explanation_textfield{
           font-size: 20;
@@ -130,7 +191,7 @@ $main: #1e90ff;
           top: 42%;
           width: 50%;
           height: 30%;
-          background: #ffffff -webkit-gradient(
+          background: #e6e6e6 -webkit-gradient(
           linear,
           left top, left bottom,
           from(rgba(0, 0, 0, 0)),
@@ -165,17 +226,45 @@ $main: #1e90ff;
 
   }
 }
+
+@media(min-width: 768px){
+  .gommi_new {
+    h1{
+    font-size: 60px;
+  }
+
+}
+
+}
+@media(max-width: 767px){
+  .gommis_new .iwa{
+    display: none;
+}
+.field{
+  font-size: 5px;
+}
+
+#binButton{
+  max-width: auto;
+   height: 100px;
+  position: absolute;
+   left: 73%; top: 65%;
+}
+
+}
 // 完了画面用
 .gommis_complete{
   text-align: center;
   // background: #ffffff;
   h1{
+    padding-top: 100px;
+    margin-bottom: 0;
     text-align: center;
     color: $main;
-    font-size: 80px;
+    font-size: 8vw;
   }
   .dustBox{
-    margin: 0 auto;
+    margin: 0;
   }
   #sineCanva{
     position: absolute;
@@ -183,20 +272,58 @@ $main: #1e90ff;
     left: 0px;
     z-index: -100;
   }
-  .boxContainer{
-    .box1{
-      float: left;
-      margin-left: 20%;
-      width: 30%;
-      text-align: center;
-      color: $main;
-    }
-    .box2{
-      margin-left: 50%;
-      width:30%;
-      text-align: center;
-      color: $main;
-    }
-    font-size: 30px;
+
+   .boxContainer{
+    text-align: center;
+  z-index: 10;
+  color: #5a5a5a;
   }
+  .boxContainer :hover{
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: #fff;
+  }
+   .square_btn{
+     font-size: 30px;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      margin: 80px;
+      padding: 0.25em 0;
+      text-decoration: none;
+      color: #67c5ff;
+      :hover{
+    background-color: none
+      }
+   }
+
+   .square_btn:before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 4px;
+      top:100%;
+      left: 0;
+      border-radius: 3px;
+      background:#67c5ff;
+      transition: .2s;
+   }
+
+   .square_btn:hover:before {
+       top: -webkit-calc(100% - 3px);
+       top: calc(100% - 3px);
+       color: #fff;
+       background-color: rgba(55,134,232,0.3);
+   }
+}
+@media(min-width: 768px){
+  .gommi_new h1{
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 767px){
+  /*小さい画面*/
+
+
 }

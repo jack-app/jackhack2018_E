@@ -1,3 +1,34 @@
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $(".headC").click(function(){
+    $(".headB").slideToggle();
+  });
+});
+$(document).ready(function(){
+    $('.headB').click(function(){
+        if($(window).width() > 767){
+        } else{
+            $('nav').slideToggle();
+        }
+    });
+    $('.headC').click(function(){
+        if($(window).width() > 767){
+        } else{
+            $('nav').hide();
+        }
+    });
+});
+$(window).resize(function(){
+    if($(window).width() > 767){
+        $('nav').show();
+    } else{
+        $('nav').hide();
+    }
+});
+</script>
+
+
 <div class="gommiForm">
   <%= form_with(model: gommi, local: true) do |form| %>
     <% if gommi.errors.any? %>
@@ -13,6 +44,7 @@
     <% end %>
 
 <div class="forms">
+  <h1>ぜんぶうみにながそう</h1>
   <div class="field">
     <%= form.text_field :title, placeholder: "たいとる", class: 'title_textfield textfield'%>
   </div>
@@ -24,11 +56,10 @@
   <div class="field">
     <%= form.select :kind, [["芸術", "芸術"],["サービス","サービス"],["ゲーム","ゲーム"],["レシピ","レシピ"]], prompt: "しゅるいをせんたくしてね", class: 'kind_textfield textfield' %>
   </div>
-
 </div>
 
     <div class="actions">
-      <%= image_submit_tag "binButton.png", style: "position: absolute; left: 73%; top: 65%; onmouseover: \"this.style.width=19%\"", id: "binButton" %>
+      <%= image_submit_tag "binButton.png",style: "position: absolute; left: 73%; top: 65%; onmouseover: \"this.style.width=19%\"", id: "binButton" %>
     </div>
   <% end %>
 

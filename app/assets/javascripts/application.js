@@ -15,3 +15,12 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+  $(".container").letterfx({
+    "fx": "grow",
+    "backwards": false,
+    "timing": 50,
+    "fx_duration": "350ms",
+    "letter_end": "restore",
+    "element_end": "restore"
+  });

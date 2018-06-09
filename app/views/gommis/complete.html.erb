@@ -1,24 +1,21 @@
+<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 <div class="gommis_complete">
-  <br><br><br>
+
   <h1>ながしました !</h1>
-  <br><br>
   <!-- <%=image_tag(src = "/assets/dustBox", size: 17*17, class: "dustBox")%> -->
-  <br><br><br>
-  <br><br><br>
+
   <div class="boxContainer">
-    <div class="box1">
-      <%=link_to("もういちどながす", new_gommi_path, :style=>"color: #1e90ff;border-bottom: solid 3px; font-size: 40px;  z-index: 10000" )%>
-    </div>
-    <div class="box2">
-      <%=link_to("びんをひろいにいく", gommis_pick_path, :style=>"color: #1e90ff; z-index: 10000;border-bottom: solid 3px; font-size: 40px;")%>
-    </div>
+            <a href="/gommis/new" class="square_btn">もういちどながしにいく</a>
+
+            <a href="/gommis/pick" class="square_btn">ひろいにいく</a>
   </div>
   <div id="canvas-container">
     <%= image_tag(src = "/assets/flowedBin.png", style: " position:  absolute; z-index: 1; width: 9%;", id:"flowedBi")%>
       <canvas id="sineCanva" width="800" height="300"></canvas>
   </div>
 </div>
-<%= image_tag(src = "/assets/stone.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: -1", id:"stone")%>
+<%= image_tag(src = "/assets/ground.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: -1", id:"stone")%>
 
 <%= javascript_include_tag "waveforComplete.js" %>
