@@ -1,27 +1,51 @@
 
-<div class="home">
-  <br>
-  <br>
-  <div class="a", style="text-align: center;">
-    <%=image_tag("/assets/logo.png", width: 500)%>
-  </div>
-  <div class="view">
-    <div class="boxContainer">
-    	<div class="box">
-        <%= link_to("ながしにいく", new_gommi_path, style: "font-size: 80px; border-bottom: solid;")%>
-      </div>
-    	<div class="box">
-        <%= link_to("ひろいにいく", gommis_pick_path, style: "font-size: 80px; border-bottom: solid;")%>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<title>home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $(".headC").click(function(){
+    $(".headB").slideToggle();
+  });
+});
+</script>
+</head>
+
+<body>
+
+
+
+<div class="conA">
+  <div class="container">
+    <p>だれかに<span id="sent">届く</span>といいですね。</p>
+    <h1> bottle </h1>
   </div>
 
-    <div id="canvas-container">
-      <%= image_tag(src = "/assets/flowedBin.png", style: " position:  absolute; z-index: 100; width: 9%;", id:"flowedBin")%>
-        <canvas id="sineCanvas" width="800" height="300"></canvas>
-    </div>
+<div class="box">
+        <a href="/gommis/new" class="square_btn">ながしにいく</a>
+
+        <a href="/gommis/pick" class="square_btn">ひろいにいく</a>
+      </div>
+
+
+
+<div id="canvas-container">
+  <%= image_tag(src = "/assets/flowedBin.png", style: " position:  absolute; z-index: 1; width: 9%;", id:"flowedBi")%>
+    <canvas id="sineCanva"></canvas>
+  </div>
+
 </div>
-<%= image_tag(src = "/assets/stone.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: -1", id:"stone")%>
+<img class="groundImage" src="assets/ground.png">
 
 
-<%= javascript_include_tag 'wave' %>
+</body>
+</html>
+
+<%= javascript_include_tag "waveforComplete.js" %>

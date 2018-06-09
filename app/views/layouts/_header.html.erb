@@ -1,5 +1,49 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <%=link_to("bottle", root_path, class:"navbar-brand")%>
-</nav>
+
+
+<!--ここからちょっとよくわからないです-->
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.headB').click(function(){
+        if($(window).width() > 767){
+        } else{
+            $('nav').slideToggle();
+        }
+    });
+    $('.headC').click(function(){
+        if($(window).width() > 767){
+        } else{
+            $('nav').hide();
+        }
+    });
+});
+$(window).resize(function(){
+    if($(window).width() > 767){
+        $('nav').show();
+    } else{
+        $('nav').hide();
+    }
+});
+</script>
+
+<!--ここまでです-->
+
+
+  <header>
+    <div class="container">
+      <div class="container-small">
+        <a href="/" class="headA">Bottle</a>
+
+      <button type="button" class="headC">
+        <span class="fas fa-bars" title="MENU"></span>
+      </button>
+    </div>
+
+      <nav class="headB">
+        <ul>
+          <li><a href="/gommis/new" class="headB" >ながす</a></li>
+            <li><a href="/gommis/pick" class="headB">ひろう</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

@@ -1,7 +1,46 @@
+<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+  $(".headC").click(function(){
+    $(".headB").slideToggle();
+  });
+});
+$(document).ready(function(){
+    $('.headB').click(function(){
+        if($(window).width() > 767){
+        } else{
+            $('nav').slideToggle();
+        }
+    });
+    $('.headC').click(function(){
+        if($(window).width() > 767){
+        } else{
+            $('nav').hide();
+        }
+    });
+});
+$(window).resize(function(){
+    if($(window).width() > 767){
+        $('nav').show();
+    } else{
+        $('nav').hide();
+    }
+});
+</script>
+
+
 <div class="pick">
   <br><br><br>
   <h1>びんをはっけん</h1>
-  <%=link_to(image_tag("/assets/synahama_bin.png", style:"position: absolute; top: 55%; left: 44%;height: 30%;", id: "pyonBin"), "#{Gommi.offset(rand(Gommi.count)).first.id}")%>
+  <div class="pyon">
+  <%=link_to(image_tag("/assets/synahama_bin.png", style:"position: absolute; top: 60%; left: 38%;height: 30%;", id: "pyonBin"), "#{Gommi.offset(rand(Gommi.count)).first.id}")%>
+</div>
 </div>
 <%= image_tag(src = "/assets/sunahama.png", style: "position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: -1", id:"stone")%>
-<%= javascript_include_tag 'pick' %>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
